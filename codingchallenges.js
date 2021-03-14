@@ -1,5 +1,9 @@
+// Starting Data
+
 const dogAges = [5, 2, 4, 1, 15, 8, 3];
 const dogAges2 = [16, 6, 10, 5, 6, 1, 4];
+
+// Helpfull Function
 
 const toHumanAge = function(dogAge) {
     if (dogAge <= 2) {
@@ -9,13 +13,15 @@ const toHumanAge = function(dogAge) {
     }
 };
 
+//  Final Function
+
 const calcAverageHuman = function(dogAges) {
     const humanAges = dogAges.map(toHumanAge);
-    console.log(humanAges);
+
     const adultHumanAges = humanAges.filter(function(humanAge) {
         return humanAge >= 18;
     });
-    console.log(adultHumanAges);
+
     const average = adultHumanAges.reduce(
         (acc, adultHumanAge) => acc + adultHumanAge,
         0
@@ -24,3 +30,19 @@ const calcAverageHuman = function(dogAges) {
 };
 calcAverageHuman(dogAges);
 calcAverageHuman(dogAges2);
+
+// Same function with using Chain and Arrow Function
+
+const calcAverageChain = (dogAges) =>
+    dogAges
+    .map((dogAge) => (dogAge <= 2 ? 2 * dogAge : 16 + dogAge * 4))
+    .filter((dogAge) => dogAge > 18)
+    .reduce(
+        (acc, adultHumanAge, i, arr) => acc + adultHumanAge / arr.length,
+        0
+    );
+
+const avg1 = calcAverageChain(dogAges);
+const avg2 = calcAverageChain(dogAges2);
+
+console.log(avg1, avg2);
