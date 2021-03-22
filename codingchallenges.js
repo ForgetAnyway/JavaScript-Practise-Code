@@ -234,3 +234,78 @@ dogs.map((dog) => {
 });
 
 console.log(okayDogs);
+
+console.log(23 === 23.0);
+
+console.log(+"23");
+
+console.log(Number.parseInt("3.10px", 10));
+console.log(Number.parseFloat("3.10px", 10));
+
+// Checking if value is a number
+console.log(Number.isNaN(+"23X"));
+console.log(Number.isFinite(20));
+
+console.log(Math.sqrt(25));
+console.log(Math.max(23, 12, 15, 53));
+console.log(Math.min(23, 12, 15, 53));
+console.log(Math.PI * Number.parseFloat("10px") ** 2);
+console.log(Math.trunc(Math.random() * 10) + 1);
+
+// Rounding inteegtes
+
+console.log(Math.trunc(23.3));
+console.log(Math.round(23.6));
+console.log(Math.trunc(23.3));
+console.log(Math.ceil(23.3));
+console.log(Math.ceil(23.9));
+console.log(Math.floor(23.3));
+console.log(Math.floor(23.9));
+
+// Rounding decimals
+
+console.log(+(2.345).toFixed(2));
+
+// Reminder operator
+
+console.log(5 % 2);
+console.log(8 % 3);
+
+console.log(7 % 2);
+
+const EvenOrOdd = function(number) {
+    number % 2 === 0 ? console.log("Its even") : console.log("Its odd");
+};
+
+EvenOrOdd(3);
+
+// labelBalance.addEventListener("click", function() {
+//     [...document.querySelectorAll(".movements__row")].forEach((mov, i) => {
+//         if (i % 2 === 0) mov.style.backgroundColor = "orangered";
+//     });
+// });
+
+console.log(BigInt(4213312421421412341241));
+
+console.log(1000);
+
+// Create a Date
+
+// const now = new Date();
+// console.log(now);
+// console.log(new Date("aug 02 2020 18:04"));
+// console.log(new Date(account1.movementsDates[0]));
+// console.log(new Date(3 * 24 * 60 * 60 * 1000));
+
+const future = new Date(2037, 10, 19, 15, 23);
+console.log(future);
+console.log(future.getFullYear());
+console.log(future.getMonth());
+console.log(future.getDate());
+console.log(future.getDay());
+console.log(future.getMinutes());
+console.log(future.getSeconds());
+console.log(future.toISOString());
+console.log(future.getTime());
+
+console.log(new Date(214222509099));
